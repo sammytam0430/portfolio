@@ -21,5 +21,6 @@
 ## Todo
 
 - [ ] Set Up Front End
-  - [ ] Create Navbar
-  - [ ] Style Navbar
+  - [x] Create Navbar
+  - [x] Style Navbar
+  - [ ] Set Up Home Page

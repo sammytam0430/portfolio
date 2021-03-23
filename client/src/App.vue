@@ -1,11 +1,13 @@
 <template>
   <div>
-    <Navbar />
+    <navbar />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/navbar/index.vue';
+// import necessary components and services
+import Navbar from '@/components/navbar.vue';
 export default {
   name: 'App',
   components: {
@@ -14,12 +16,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+body {
+  margin: 0;
+  background: black;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: cornsilk;
 }
 </style>
