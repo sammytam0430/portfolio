@@ -7,7 +7,7 @@
 
 <script>
 // import necessary components and services
-import Navbar from '@/components/navbar.vue';
+import Navbar from '@/components/Navbar.vue';
 export default {
   name: 'App',
   components: {

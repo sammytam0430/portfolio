@@ -4,6 +4,7 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"nodemon index.js\" \"cd client && npm run serve\"",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/sammytam0430/personal#readme",
   "dependencies": {
+    "bootstrap-vue": "^2.21.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.1.1",

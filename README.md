@@ -24,3 +24,5 @@
   - [x] Create Navbar
   - [x] Style Navbar
   - [ ] Set Up Home Page
+- [ ] Set Up Back End
+- [ ] Set Up Database
