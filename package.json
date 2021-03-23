@@ -1,0 +1,29 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon index.js\" \"cd client && npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammytam0430/personal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammytam0430/personal/issues"
+  },
+  "homepage": "https://github.com/sammytam0430/personal#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
