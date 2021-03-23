@@ -1,7 +1,18 @@
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 export default {
   setup() {
-    return {};
+    const items = ref([
+      'Home',
+      'Projects',
+      'Blogs',
+      'Plans',
+      'Contact',
+      'About',
+    ]);
+
+    return {
+      items,
+    };
   },
 };
