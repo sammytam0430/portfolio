@@ -18,6 +18,21 @@ export default {
 </script>
 
 <style lang="scss">
+.view {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 i:hover {
   cursor: pointer;
 }
