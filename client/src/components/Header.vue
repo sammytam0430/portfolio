@@ -1,7 +1,8 @@
 <template>
-  <div id="header" class="bg-light">
-    <i class="fas fa-bars fa-lg" @click="openMenu"></i>
+  <div id="header" class="bg-light w-100 position-fixed top-0">
+    <i class="fas fa-bars fa-lg position-absolute" @click="openMenu"></i>
   </div>
+  <div></div>
 </template>
 
 <script>
@@ -25,16 +26,12 @@ export default {
 <style scoped lang="scss">
 #header {
   height: 50px;
-  position: fixed;
-  top: 0;
   transition: 0.5s;
-  width: 100%;
   z-index: 1;
 }
 
 #header i {
   left: 20px;
-  position: absolute;
   top: 20px;
 }
 </style>

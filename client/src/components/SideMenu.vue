@@ -1,9 +1,16 @@
 <template>
-  <div id="sideMenu" class="bg-dark" @blur="closeMenu">
-    <i class="fas fa-times fa-lg text-light" @click="closeMenu"></i>
+  <div
+    id="sideMenu"
+    class="bg-dark h-100 pt-5 position-fixed top-0 start-0"
+    @blur="closeMenu"
+  >
+    <i
+      class="fas fa-times fa-lg text-light position-absolute"
+      @click="closeMenu"
+    ></i>
     <div class="links">
       <router-link
-        class="text-light"
+        class="text-light w-100 text-decoration-none d-block"
         v-for="item in items"
         :key="item.name"
         :to="item.path"
@@ -12,7 +19,7 @@
         {{ item.name }}
       </router-link>
     </div>
-    <span class="footer text-warning">
+    <span class="footer text-warning position-absolute bottom-0 start-0 ms-2">
       © 2021 Sammy Tam All Rights Reserved
       <Footer />
     </span>
@@ -61,20 +68,14 @@ export default {
 
 <style scoped lang="scss">
 #sideMenu {
-  height: 100%;
   min-height: 270px;
   width: 0;
-  position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   overflow-x: hidden;
-  padding-top: 50px;
   transition: width 0.5s;
 }
 
 #sideMenu i {
-  position: absolute;
   top: 20px;
   right: 20px;
 }
@@ -82,9 +83,6 @@ export default {
 #sideMenu a {
   padding: 8px 0 0 32px;
   height: 40px;
-  width: 100%;
-  text-decoration: none;
-  display: block;
   transition: 0.3s;
 }
 
@@ -109,9 +107,6 @@ export default {
 
 .footer {
   font-size: 0.8em;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
   white-space: nowrap;
 }
 
