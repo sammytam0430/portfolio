@@ -2,21 +2,30 @@
   <div id="home" class="grid w-100">
     <div v-for="item of items" :class="[item.name, 'card']" :key="item.name">
       <!-- <img :src="item.img" class="card-img" alt="" /> -->
-      <div class="card-img-overlay text-light w-100">
+      <div class="card-img-overlay text-light w-100 px-0 py-2">
         <h5 class="card-title text-center">{{ item.title }}</h5>
-        <p v-if="item.name === 'socials'" class="card-text text-center">
-          <a
-            v-for="link of item.content"
-            :href="link.href"
-            target="_blank"
-            :class="[link.icon, link.type, ...iconClasses]"
-            :key="link.name"
-          ></a>
-        </p>
-        <p v-else class="card-text text-center">
-          {{ item.content }}
-        </p>
-        <p class="card-text footer text-left w-100">
+        <div class="text-center w-100 position-absolute top-50">
+          <p v-if="item.name === 'socials'" class="card-text text-center">
+            <a
+              v-for="link of item.content"
+              :href="link.href"
+              target="_blank"
+              :class="[link.icon, link.type, ...iconClasses]"
+              :key="link.name"
+            ></a>
+          </p>
+          <p v-else class="card-text">
+            {{ item.content }}<span class="cursor text-warning">|</span>
+          </p>
+          <router-link v-if="item.name !== 'socials'" :to="'/' + item.name">
+            <button type="button" class="btn btn-outline-light">
+              {{ item.name }}
+            </button>
+          </router-link>
+        </div>
+        <p
+          class="footer card-text text-left w-100 mx-2 position-absolute bottom-0"
+        >
           {{ item.footer }}
         </p>
       </div>
@@ -33,7 +42,7 @@ export default {
       {
         name: 'about',
         title: 'About',
-        content: '',
+        content: 'Hi! My name is sammy.',
         footer: '',
       },
       {
@@ -116,42 +125,27 @@ export default {
   top: 0;
 }
 
-.card-img-overlay .footer {
-  position: absolute;
-  bottom: 0;
+.card-text a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.cursor {
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+  animation-duration: 1s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .grid {
   display: grid;
   height: 93vh;
-}
-
-@media only screen and (max-width: 800px) {
-  .grid {
-    display: block;
-  }
-
-  .card {
-    width: 100vw;
-  }
-
-  .about {
-    height: 100vh;
-    min-height: 500px;
-  }
-
-  .projects,
-  .blogs,
-  .plans,
-  .contact {
-    height: 50vh;
-    min-height: 250px;
-  }
-
-  .socials {
-    height: 12vh;
-    min-height: 80px;
-  }
 }
 
 .about {
@@ -190,8 +184,31 @@ export default {
   background-image: url('../assets/socials.jpg');
 }
 
-.card-text a {
-  color: #f8f9fa;
-  text-decoration: none;
+@media only screen and (max-width: 800px) {
+  .grid {
+    display: block;
+  }
+
+  .card {
+    width: 100vw;
+  }
+
+  .about {
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .projects,
+  .blogs,
+  .plans,
+  .contact {
+    height: 50vh;
+    min-height: 250px;
+  }
+
+  .socials {
+    height: 12vh;
+    min-height: 80px;
+  }
 }
 </style>
