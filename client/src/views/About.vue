@@ -20,7 +20,7 @@
 <style lang="scss" scoped>
 .heading {
   background-image: url('../assets/about.jpeg');
-  background-size: fixed;
+  background-size: cover;
   background-position: center;
   height: 93vh;
 }
