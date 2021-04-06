@@ -158,42 +158,36 @@ export default {
   grid-row: 1/ 8;
   // grid-column: 1/ 3;
   background-image: url('../assets/about.jpeg');
-  background-color: red;
 }
 
 .projects {
   grid-row: 1/ 5;
   // grid-column: 3/ 5;
   background-image: url('../assets/projects.jpg');
-  background-color: blue;
 }
 
 .plans {
   grid-row: 5/ 10;
   // grid-column: 3/ 5;
   background-image: url('../assets/plans.jpg');
-  background-color: yellow;
 }
 
 .blogs {
   grid-row: 1/ 6;
   // grid-column: 5/ 7;
   background-image: url('../assets/blogs.jpeg');
-  background-color: green;
 }
 
 .contact {
   grid-row: 6/ 10;
   // grid-column: 5/ 7;
   background-image: url('../assets/contact.jpeg');
-  background-color: orange;
 }
 
 .socials {
   grid-row: 8/ 10;
   // grid-column: 1/ 3;
   background-image: url('../assets/socials.jpg');
-  background-color: purple;
 }
 
 .card-text a {
