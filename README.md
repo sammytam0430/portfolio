@@ -45,7 +45,8 @@
   - [ ] Setup Contact Page
 
 - [ ] Set Up Back End
-      [ ] Host Static Files
+
+  - [ ] Host Static Files
 
 - [ ] Set Up Database
   - [ ] Move hardcoded data to DB
