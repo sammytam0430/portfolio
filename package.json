@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/sammytam0430/personal#readme",
   "dependencies": {
-    "bootstrap-vue": "^2.21.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.1.1",
