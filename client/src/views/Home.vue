@@ -1,28 +1,31 @@
 <template>
   <div id="home" class="grid w-100">
     <div v-for="item of items" :class="[item.name, 'card']" :key="item.name">
-      <!-- <img :src="item.img" class="card-img" alt="" /> -->
       <div class="card-img-overlay text-light w-100 px-0 py-2">
-        <h5 class="card-title text-center">{{ item.title }}</h5>
-        <div class="text-center w-100 position-absolute top-50">
-          <p v-if="item.name === 'socials'" class="card-text text-center">
-            <a
-              v-for="link of item.content"
-              :href="link.href"
-              target="_blank"
-              :class="[link.icon, link.type, ...iconClasses]"
-              :key="link.name"
-            ></a>
-          </p>
-          <p v-else class="card-text">
-            {{ item.content }}<span class="cursor text-warning">|</span>
-          </p>
-          <router-link v-if="item.name !== 'socials'" :to="'/' + item.name">
+        <!-- <h5 class="card-title text-center">{{ item.title }}</h5> -->
+        <p
+          v-if="item.name === 'socials'"
+          class="card-text text-center w-100 position-absolute top-50"
+        >
+          {{ item.title }}<span class="cursor text-warning">|</span>
+          <br />
+          <a
+            v-for="link of item.content"
+            :href="link.href"
+            target="_blank"
+            :class="[link.icon, link.type, ...iconClasses]"
+            :key="link.name"
+          ></a>
+        </p>
+        <p v-else class="card-text text-center w-100 position-absolute top-50">
+          {{ item.content }}<span class="cursor text-warning">|</span>
+          <br />
+          <router-link :to="'/' + item.name">
             <button type="button" class="btn btn-outline-light">
               {{ item.name }}
             </button>
           </router-link>
-        </div>
+        </p>
         <p
           class="footer card-text text-left w-100 mx-2 position-absolute bottom-0"
         >
@@ -48,15 +51,30 @@ export default {
       {
         name: 'projects',
         title: 'Projects',
-        content: '',
+        content: "See what I've worked on ;)",
         footer: '',
       },
-      { name: 'blogs', title: 'Blogs', content: '', footer: '' },
-      { name: 'plans', title: 'Plans', content: '', footer: '' },
-      { name: 'contact', title: 'Contact', content: '', footer: '' },
+      {
+        name: 'blogs',
+        title: 'Blogs',
+        content: 'Come see what I have to say.',
+        footer: '',
+      },
+      {
+        name: 'plans',
+        title: 'Plans',
+        content: 'The future is full of possibilities',
+        footer: '',
+      },
+      {
+        name: 'contact',
+        title: 'Contact',
+        content: 'Want to get in touch? Maybe hire me?',
+        footer: '',
+      },
       {
         name: 'socials',
-        title: 'You Can Find Me Here',
+        title: 'You Can Find Me Here.',
         content: [
           {
             name: 'linkdein',
