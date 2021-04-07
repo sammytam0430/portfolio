@@ -19,7 +19,7 @@
         </p>
         <p
           v-else
-          class="card-text text-center w-100 position-absolute top-50 start-50 translate-middle"
+          class="card-text text-center position-absolute top-50 start-50 translate-middle"
         >
           <span v-html="item.content"></span>
           <span class="cursor text-warning">|</span>
@@ -152,6 +152,10 @@ export default {
 .card:hover .card-img-overlay,
 .card:active .card-img-overlay {
   top: 0;
+}
+
+.card-text {
+  width: 90%;
 }
 
 .grid {
