@@ -1,7 +1,9 @@
 <template>
   <div id="header" class="bg-light w-100 position-fixed top-0">
     <i class="fas fa-bars fa-lg position-absolute" @click="openMenu"></i>
-    <span class="position-absolute top-0 end-0 me-5 fs-2">SAMMY TAM</span>
+    <h2 class="title position-absolute">
+      SAMMY TAM<span class="cursor text-warning">|</span>
+    </h2>
   </div>
 </template>
 
@@ -33,5 +35,10 @@ export default {
 #header i {
   left: 20px;
   top: 20px;
+}
+
+.title {
+  top: 10px;
+  right: 20px;
 }
 </style>
