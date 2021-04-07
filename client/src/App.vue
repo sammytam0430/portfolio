@@ -33,6 +33,19 @@ export default {
   }
 }
 
+.cursor {
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+  animation-duration: 1s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 i:hover {
   cursor: pointer;
 }

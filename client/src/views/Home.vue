@@ -50,7 +50,7 @@ export default {
         name: 'about',
         title: 'about me',
         content:
-          "Hi! My name is Sammy.<br /> I'm a web developer in <strong>Vancouver, BC</strong> looking to be hired.",
+          'Hi! My name is <span class="text-warning">Sammy</span>.<br /> I\'m a web developer in <strong class="text-success">Vancouver, BC</strong> looking for opportunity.',
         footer: '',
       },
       {
@@ -152,19 +152,6 @@ export default {
 .card:hover .card-img-overlay,
 .card:active .card-img-overlay {
   top: 0;
-}
-
-.cursor {
-  animation-name: blink;
-  animation-iteration-count: infinite;
-  animation-timing-function: step-start;
-  animation-duration: 1s;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
 }
 
 .grid {
