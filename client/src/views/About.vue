@@ -1,5 +1,46 @@
 <template>
   <div id="about">
+    <div
+      id="directory"
+      class="text-light p-2 position-fixed border-start border-info"
+    >
+      <span class="text-secondary">const </span>sammy
+      <span class="text-info">= </span>
+      <span class="text-warning">{</span>
+      <br />
+      <span class="ps-4 text-success">about</span>
+      <span class="text-info">: </span>
+      <a>about</a>,
+      <br />
+      <span class="ps-4 text-success">education</span>
+      <span class="text-info">: </span>
+      <a>education</a>,
+      <br />
+      <span class="ps-4 text-success">experience</span>
+      <span class="text-info">: </span>
+      <a>experience</a>,
+      <br />
+      <span class="ps-4 text-success">skills</span>
+      <span class="text-info">: </span>
+      <a>skills</a>,
+      <br />
+      <span class="ps-4 text-success">projects</span>
+      <span class="text-info">: </span>
+      <a>projects</a>,
+      <br />
+      <span class="text-warning">}</span>
+      <span class="text-info">;</span>
+      <br />
+    </div>
+    <div class="heading p-5 text-light">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Hi, I'm Sammy.</h1>
+        <p class="heading-text col-md-8 fs-4">
+          Not gonna lie, this personal website/ portfolio is really fun to make.
+          This page is essentially my resume.
+        </p>
+      </div>
+    </div>
     <div class="heading p-5 bg-dark text-light">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Custom jumbotron</h1>
@@ -17,11 +58,44 @@
   </div>
 </template>
 
+<script>
+export default {
+  setup() {
+    const closeDirectory = () => {
+      document.getElementById('directory').style.marginTop = '-195px';
+    };
+
+    const openDirectory = () => {
+      document.getElementById('directory').style.marginTop = '0px';
+    };
+
+    return { closeDirectory, openDirectory };
+  },
+};
+</script>
+
 <style lang="scss" scoped>
+#directory {
+  background-color: rgba($color: black, $alpha: 0.5);
+  top: 80px;
+  right: 20px;
+}
+
 .heading {
   background-image: url('../assets/about.jpeg');
   background-size: cover;
   background-position: center;
   height: 93vh;
+}
+
+@media only screen and (max-width: 775px) {
+  #directory {
+    background-color: rgba($color: black, $alpha: 0.8);
+    top: 50px;
+    margin-top: -195px;
+    right: 0;
+    width: 100%;
+    transition-duration: margin-top 1s;
+  }
 }
 </style>
