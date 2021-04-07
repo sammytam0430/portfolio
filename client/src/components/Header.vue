@@ -15,8 +15,8 @@ export default {
     };
     window.addEventListener('scroll', (event) => {
       document.getElementById('header').className = event.path[1].scrollY
-        ? 'text-light bg-dark'
-        : 'bg-light';
+        ? 'text-light bg-dark w-100 position-fixed top-0'
+        : 'bg-light w-100 position-fixed top-0';
     });
     return {
       openMenu,
