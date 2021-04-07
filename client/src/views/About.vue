@@ -2,7 +2,7 @@
   <div id="about">
     <div
       id="directory"
-      class="text-light p-2 position-fixed border-start border-info"
+      class="text-light p-3 position-fixed border-start border-info"
     >
       <span class="text-secondary">const </span>sammy
       <span class="text-info">= </span>
@@ -34,16 +34,16 @@
     </div>
     <div
       id="directory-toggle"
-      class="position-fixed start-50 text-light mt-3 pt-1 px-3 translate-middle"
+      class="position-fixed start-50 text-light mt-4 translate-middle"
     >
       <i
         id="closeDirectory"
-        class="fas fa-chevron-up"
+        class="fas fa-chevron-up fa-lg"
         @click="closeDirectory"
       ></i>
       <i
         id="openDirectory"
-        class="fas fa-chevron-down"
+        class="fas fa-chevron-down fa-lg"
         @click="openDirectory"
       ></i>
     </div>
@@ -92,6 +92,12 @@ export default {
       if (event.path[0].innerWidth > 775) {
         document.getElementById('directory').style.marginTop = '0px';
       } else {
+        closeDirectory();
+      }
+    });
+
+    window.addEventListener('scroll', (event) => {
+      if (event.path[1].innerWidth < 775) {
         closeDirectory();
       }
     });
