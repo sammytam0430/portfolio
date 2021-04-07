@@ -5,7 +5,7 @@
         <!-- <h5 class="card-title text-center">{{ item.title }}</h5> -->
         <p
           v-if="item.name === 'socials'"
-          class="card-text text-center w-100 position-absolute top-50"
+          class="card-text text-center w-100 position-absolute top-50 start-50 translate-middle"
         >
           {{ item.title }}<span class="cursor text-warning">|</span>
           <br />
@@ -17,11 +17,15 @@
             :key="link.name"
           ></a>
         </p>
-        <p v-else class="card-text text-center w-100 position-absolute top-50">
-          {{ item.content }}<span class="cursor text-warning">|</span>
+        <p
+          v-else
+          class="card-text text-center w-100 position-absolute top-50 start-50 translate-middle"
+        >
+          <span v-html="item.content"></span>
+          <span class="cursor text-warning">|</span>
           <br />
           <router-link :to="'/' + item.name">
-            <button type="button" class="btn btn-outline-light">
+            <button type="button" class="btn btn-outline-light mt-2">
               {{ item.name }}
             </button>
           </router-link>
@@ -44,31 +48,32 @@ export default {
     const items = ref([
       {
         name: 'about',
-        title: 'About',
-        content: 'Hi! My name is sammy.',
+        title: 'about me',
+        content:
+          "Hi! My name is Sammy.<br /> I'm a web developer in <strong>Vancouver, BC</strong> looking to be hired.",
         footer: '',
       },
       {
         name: 'projects',
-        title: 'Projects',
+        title: 'projects',
         content: "See what I've worked on ;)",
         footer: '',
       },
       {
         name: 'blogs',
-        title: 'Blogs',
+        title: 'blogs',
         content: 'Come see what I have to say.',
         footer: '',
       },
       {
         name: 'plans',
-        title: 'Plans',
-        content: 'The future is full of possibilities',
+        title: 'plans',
+        content: 'The future is full of possibilities...',
         footer: '',
       },
       {
         name: 'contact',
-        title: 'Contact',
+        title: 'contact',
         content: 'Want to get in touch? Maybe hire me?',
         footer: '',
       },
@@ -111,7 +116,13 @@ export default {
       },
     ]);
 
-    const iconClasses = ref(['fa-lg', 'ms-2', 'me-2', 'text-light']);
+    const iconClasses = ref([
+      'fa-lg',
+      'ms-2',
+      'me-2',
+      'text-light',
+      'text-decoration-none',
+    ]);
 
     return { items, iconClasses };
   },
@@ -141,11 +152,6 @@ export default {
 .card:hover .card-img-overlay,
 .card:active .card-img-overlay {
   top: 0;
-}
-
-.card-text a {
-  color: #f8f9fa;
-  text-decoration: none;
 }
 
 .cursor {
@@ -226,7 +232,7 @@ export default {
 
   .socials {
     height: 12vh;
-    min-height: 80px;
+    min-height: 100px;
   }
 }
 </style>
