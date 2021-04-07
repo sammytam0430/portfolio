@@ -1,8 +1,8 @@
 <template>
   <div id="header" class="bg-light w-100 position-fixed top-0">
     <i class="fas fa-bars fa-lg position-absolute" @click="openMenu"></i>
+    <span class="position-absolute top-0 end-0 me-5 fs-2">SAMMY TAM</span>
   </div>
-  <div></div>
 </template>
 
 <script>
