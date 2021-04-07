@@ -32,6 +32,21 @@
       <span class="text-info">;</span>
       <br />
     </div>
+    <div
+      id="directory-toggle"
+      class="position-fixed start-50 text-light mt-3 pt-1 px-3 translate-middle"
+    >
+      <i
+        id="closeDirectory"
+        class="fas fa-chevron-up"
+        @click="closeDirectory"
+      ></i>
+      <i
+        id="openDirectory"
+        class="fas fa-chevron-down"
+        @click="openDirectory"
+      ></i>
+    </div>
     <div class="heading p-5 text-light">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Hi, I'm Sammy.</h1>
@@ -62,12 +77,24 @@
 export default {
   setup() {
     const closeDirectory = () => {
-      document.getElementById('directory').style.marginTop = '-195px';
+      document.getElementById('directory').style.marginTop = '-250px';
+      document.getElementById('openDirectory').style.display = 'inline-block';
+      document.getElementById('closeDirectory').style.display = 'none';
     };
 
     const openDirectory = () => {
       document.getElementById('directory').style.marginTop = '0px';
+      document.getElementById('closeDirectory').style.display = 'inline-block';
+      document.getElementById('openDirectory').style.display = 'none';
     };
+
+    window.addEventListener('resize', (event) => {
+      if (event.path[0].innerWidth > 775) {
+        document.getElementById('directory').style.marginTop = '0px';
+      } else {
+        closeDirectory();
+      }
+    });
 
     return { closeDirectory, openDirectory };
   },
@@ -81,6 +108,14 @@ export default {
   right: 20px;
 }
 
+#directory-toggle {
+  display: none;
+}
+
+#closeDirectory {
+  display: none;
+}
+
 .heading {
   background-image: url('../assets/about.jpeg');
   background-size: cover;
@@ -92,10 +127,14 @@ export default {
   #directory {
     background-color: rgba($color: black, $alpha: 0.8);
     top: 50px;
-    margin-top: -195px;
+    margin-top: -250px;
     right: 0;
     width: 100%;
-    transition-duration: margin-top 1s;
+    transition: margin-top 0.5s;
+  }
+
+  #directory-toggle {
+    display: inline;
   }
 }
 </style>
