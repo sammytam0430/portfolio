@@ -155,7 +155,7 @@ export default {
 }
 
 .card-text {
-  width: 90%;
+  width: 95%;
 }
 
 .grid {
@@ -202,6 +202,7 @@ export default {
 @media only screen and (max-width: 800px) {
   .grid {
     display: block;
+    height: auto;
   }
 
   .card {
