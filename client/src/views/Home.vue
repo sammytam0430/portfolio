@@ -50,7 +50,7 @@ export default {
         name: 'about',
         title: 'about me',
         content:
-          'Hi! My name is <span class="text-warning">Sammy</span>.<br /> I\'m a web developer in <strong class="text-success">Vancouver, BC</strong> looking for opportunity.',
+          'Hi! My name is <span class="text-warning">Sammy</span>.<br /> I\'m a web developer/ software developer in <strong class="text-success">Vancouver, BC</strong> looking for opportunity.',
         footer: '',
       },
       {
