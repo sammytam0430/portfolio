@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sammytam0430/personal#readme",
   "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.1.1",
