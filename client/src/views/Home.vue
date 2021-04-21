@@ -2,7 +2,7 @@
   <div id="home" class="grid w-100">
     <div v-for="item of items" :class="[item.name, 'card']" :key="item.name">
       <div class="card-img-overlay text-light w-100 px-0 py-2">
-        <!-- <h5 class="card-title text-center">{{ item.title }}</h5> -->
+        <h5 class="card-title text-center"></h5>
         <p
           v-if="item.name === 'socials'"
           class="card-text text-center w-100 position-absolute top-50 start-50 translate-middle"
@@ -21,10 +21,10 @@
           v-else
           class="card-text text-center position-absolute top-50 start-50 translate-middle"
         >
-          <span v-html="item.content"></span>
+          <span v-html="item.title"></span>
           <span class="cursor text-warning">|</span>
           <br />
-          <router-link :to="'/' + item.name">
+          <router-link :to="item.path">
             <button type="button" class="btn btn-outline-light mt-2">
               {{ item.name }}
             </button>
@@ -48,34 +48,29 @@ export default {
     const items = ref([
       {
         name: 'about',
-        title: 'about me',
-        content:
+        path: '/about',
+        title:
           'Hi! My name is <span class="text-warning">Sammy</span>.<br /> I\'m a web developer/ software developer in <strong class="text-success">Vancouver, BC</strong> looking for opportunity.',
-        footer: '',
       },
       {
         name: 'projects',
-        title: 'projects',
-        content: "See what I've worked on ;)",
-        footer: '',
+        path: '/projects',
+        title: "See what I've worked on ;)",
       },
       {
         name: 'blogs',
-        title: 'blogs',
-        content: 'Come see what I have to say.',
-        footer: '',
+        path: '/blogs',
+        title: 'Come see what I have to say.',
       },
       {
         name: 'plans',
-        title: 'plans',
-        content: 'The future is full of possibilities...',
-        footer: '',
+        path: '/plans',
+        title: 'The future is full of possibilities...',
       },
       {
         name: 'contact',
-        title: 'contact',
-        content: 'Want to get in touch? Maybe hire me?',
-        footer: '',
+        path: '/contact',
+        title: 'Want to get in touch? Maybe hire me?',
       },
       {
         name: 'socials',
@@ -112,7 +107,6 @@ export default {
             href: 'https://discord.com/users/371879138757312513',
           },
         ],
-        footer: '',
       },
     ]);
 
