@@ -30,10 +30,10 @@
   - [x] Setup Home Page
   - [x] Create Grid on Home Page
   - [x] Add Contents to Home Page
-  - [ ] Complete Home Page Content
+  - [x] Complete Home Page Content
 
-  - [ ] Setup About Page
-  - [ ] Add Resume and Summary
+  - [x] Setup About Page
+  - [x] Add Resume and Summary
   - [ ] Style and Add animation
 
   - [ ] Setup Projects Page
@@ -46,7 +46,10 @@
 
 - [ ] Set Up Back End
 
-  - [ ] Host Static Files
+  - [x] Host Static Files
 
 - [ ] Set Up Database
+
   - [ ] Move hardcoded data to DB
+
+- [x] Host on Heroku
