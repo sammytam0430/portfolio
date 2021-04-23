@@ -5,10 +5,10 @@
       <p class="heading-text col-md-8 fs-4">
         NGL, this personal website/ portfolio is really fun to make. <br />
         This page is essentially my resume. <br />
-        Here is a tour about me if you like animation. If not, feel free to
-        browse around.
+        <strike>Here is a tour about me if you like animation. If not,</strike>
+        feel free to browse around.
       </p>
-      <button class="btn btn-light">Start the tour</button>
+      <button class="btn btn-disabled">Start the tour</button>
     </div>
   </div>
 </template>
