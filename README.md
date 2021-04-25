@@ -36,7 +36,7 @@
   - [x] Add Resume and Summary
   - [ ] Style and Add animation
 
-  - [ ] Setup Projects Page
+  - [x] Setup Projects Page
 
   - [ ] Setup Plans Page
 
