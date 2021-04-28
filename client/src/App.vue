@@ -18,6 +18,11 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --header-height: 50px;
+  scroll-padding-top: var(--header-height);
+}
+
 .view {
   animation-name: fadeIn;
   animation-duration: 1.5s;

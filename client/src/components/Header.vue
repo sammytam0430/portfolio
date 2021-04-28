@@ -27,7 +27,7 @@ export default {
 
 <style scoped lang="scss">
 #header {
-  height: 50px;
+  height: var(--header-height);
   transition: 0.5s;
   z-index: 1;
 }

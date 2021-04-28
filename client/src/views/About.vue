@@ -23,23 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#about {
-  margin-top: -50px;
-  padding-top: 50px;
-}
-
 .section {
-  height: 100vh;
-  border-top: 50px solid transparent;
-  margin-top: -50px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-
-#summary {
-}
-
-#education {
+  height: calc(100vh - var(--header-height));
 }
 </style>
