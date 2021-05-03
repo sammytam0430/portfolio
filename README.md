@@ -6,7 +6,7 @@
 
 - Vue.js
 - Bootstrap/ Material-UI
-- Sass
+- Scss
 
 ### Back End
 
