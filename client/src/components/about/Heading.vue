@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
 #heading {
-  background-image: url('../assets/about.jpeg');
+  background-image: url('../../assets/about.jpeg');
   background-size: cover;
   background-position: center;
 }

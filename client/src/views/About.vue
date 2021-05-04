@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Directory from '@/components/AboutDirectory.vue';
-import Heading from '@/components/AboutHeading.vue';
-import Summary from '@/components/AboutSummary.vue';
-import Educations from '@/components/AboutEducations.vue';
+import Directory from '@/components/about/Directory.vue';
+import Heading from '@/components/about/Heading.vue';
+import Summary from '@/components/about/Summary.vue';
+import Educations from '@/components/about/Educations.vue';
 export default {
   components: {
     Directory,
